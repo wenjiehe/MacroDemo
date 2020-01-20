@@ -74,14 +74,49 @@
 
 > 它的意思是，如果当前的宏未被定义，则对“程序段1”进行编译，否则对“程序段2”进行编译，这与 #ifdef 的功能正好相反。
 
+4. #undef
+
+> 取消已定义的宏
+
+5. #import
+
+> 在该文件中读取并包括另一个源文件。自动防止多次包含该文件
+
+6. #include 
+
+> 在该文件中读取并包括另一个源文件。不会防止多次包含该文件
+
+7. #pragma 
+
+> 用于配置编译器和IDE注释的特殊宏 
+
+8. #warning
+
+> 产生一个编译器警告
+
+9. #error
+
+> 产生一个编译器错误
+
+10. #endif
+
+> 终止#if、#ifdef、#else或#elif代码块
 
 
+## Xcode如何查看预处理和预编译阶段
 
-```
-#define 定义一个预处理宏
-#undef  取消宏的定义
+> Navigate to Related Items -> Preprocess, 把宏预处理之后的样子,可以查看预编译后的宏代码是否正确
 
-#if     编译预处理中的条件命令，相当于C语法中的if语句
-#ifdef  判断某个宏是否被定义，若已定义，执行随后的语句
-#ifndef 与#ifdef相反，判断某个宏是否未被定义
-```
+> Navigate to Related Items -> Assembly,把源码转成汇编的样子
+
+> 不同阶段的Preprocess或Assembly,都有5种预编译的种类可以选择,分别是
+
+ - Running
+ 
+ - Testing
+ 
+ - Profiling
+ 
+ - Archiving
+ 
+ - Analyzing
