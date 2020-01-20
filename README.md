@@ -105,6 +105,8 @@
 
 ## Xcode如何查看预处理和预编译阶段
 
+ [查看预处理和预编译阶段](https://github.com/wenjiehe/MacroDemo/blob/master/MacroDemo/macro.png)
+
 > Navigate to Related Items -> Preprocess, 把宏预处理之后的样子,可以查看预编译后的宏代码是否正确
 
 > Navigate to Related Items -> Assembly,把源码转成汇编的样子
